@@ -1,0 +1,167 @@
+main) root@C.61801330:/workspace/c3c_bundle$ sed -i 's/double th = row<-3>/double thand = row<-3>/; s/best <= 0\.90 \* th ?/best <= 0.90 * thand ?/; s/100 \* (1 - best \/ th),/100 * (1 - best \/ thand),/' c3c_time.cu
+(main) root@C.61801330:/workspace/c3c_bundle$ nohup bash run_c3c.sh > /dev/null 2>&1 &
+sleep 5; tail -f resultats_c3c.txt
+[1] 6713
+== Recherche génétique (programmation génétique linéaire, parties A + B, macro-mutations algébriques) sur GPU
+  static const char* OPN[NOPS] = {"nop", "add", "sub", "mul", "fma", "fms", "fnma"};
+                     ^
+
+
+  static int nreads_after(Part& p, int j, int r, const uint8_t* o1, const uint8_t* o2){
+             ^
+
+
+Moteur : GPU NVIDIA GeForce RTX 5090 (170 SM)
+Entrées difficiles (< 2^-35 d'un milieu) : 396837  [0 s]
+Jeu d'évaluation : 658981 entrées (dont 262144 aléatoires)
+Graine : 21 opérations ; vérification exhaustive : 0 erreurs, 22090 renvois vers le double  [0 s]
+   gen    0 : NOUVEAU candidat EXACT vérifié (2^32 entrées) : 20 opérations, 22090 renvois  [0 s]
+gen   0 : meilleur 20 opérations (aptitude 20.63) ; valides dans la population : 1912/4096  [1 s]
+gen   1 : meilleur 20 opérations (aptitude 20.29) ; valides dans la population : 1829/4096  [1 s]
+gen   2 : meilleur 19 opérations (aptitude 19.59) ; valides dans la population : 1820/4096  [1 s]
+   gen   10 : NOUVEAU candidat EXACT vérifié (2^32 entrées) : 16 opérations, 10753 renvois  [2 s]
+   gen   10 : NOUVEAU candidat EXACT vérifié (2^32 entrées) : 17 opérations, 10715 renvois  [2 s]
+   gen   40 : NOUVEAU candidat EXACT vérifié (2^32 entrées) : 15 opérations, 10712 renvois  [7 s]
+   gen   40 : NOUVEAU candidat EXACT vérifié (2^32 entrées) : 15 opérations, 10712 renvois  [7 s]
+gen  50 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2346/4096  [9 s]
+gen 100 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2525/4096  [18 s]
+gen 150 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2591/4096  [28 s]
+gen 200 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2570/4096  [38 s]
+gen 250 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2592/4096  [48 s]
+gen 300 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2596/4096  [58 s]
+gen 350 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2597/4096  [68 s]
+gen 400 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2600/4096  [78 s]
+gen 450 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2645/4096  [88 s]
+gen 500 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2608/4096  [98 s]
+gen 550 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2627/4096  [107 s]
+gen 600 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2666/4096  [117 s]
+gen 650 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2580/4096  [127 s]
+gen 700 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2701/4096  [137 s]
+gen 750 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2656/4096  [147 s]
+gen 800 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2672/4096  [157 s]
+gen 850 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2683/4096  [167 s]
+gen 900 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2649/4096  [177 s]
+gen 950 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2666/4096  [187 s]
+gen 1000 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2700/4096  [197 s]
+gen 1050 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2639/4096  [207 s]
+gen 1100 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2681/4096  [217 s]
+gen 1150 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2642/4096  [226 s]
+gen 1200 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2643/4096  [236 s]
+gen 1250 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2684/4096  [246 s]
+gen 1300 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2736/4096  [256 s]
+gen 1350 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2702/4096  [266 s]
+gen 1400 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2656/4096  [276 s]
+gen 1450 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2673/4096  [286 s]
+gen 1500 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2720/4096  [
+296 s]
+gen 1550 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2689/4096  [306 s]
+gen 1600 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2727/4096  [316 s]
+gen 1650 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2736/4096  [326 s]
+gen 1700 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2711/4096  [336 s]
+gen 1750 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2734/4096  [346 s]
+gen 1800 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2694/4096  [356 s]
+gen 1850 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2716/4096  [366 s]
+gen 1900 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2633/4096  [376 s]
+gen 1950 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2752/4096  [386 s]
+gen 2000 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2750/4096  [395 s]
+gen 2050 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2661/4096  [405 s]
+gen 2100 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2695/4096  [415 s]
+gen 2150 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2671/4096  [425 s]
+gen 2200 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2719/4096  [435 s]
+gen 2250 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2650/4096  [445 s]
+gen 2300 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2732/4096  [455 s]
+gen 2350 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2703/4096  [465 s]
+gen 2400 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2697/4096  [475 s]
+gen 2450 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2718/4096  [485 s]
+gen 2500 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2653/4096  [495 s]
+gen 2550 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2743/4096  [505 s]
+gen 2600 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2712/4096  [515 s]
+gen 2650 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2693/4096  [525 s]
+gen 2700 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2716/4096  [535 s]
+gen 2750 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2745/4096  [545 s]
+gen 2800 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2702/4096  [555 s]
+gen 2850 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2707/4096  [565 s]
+gen 2900 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2694/4096  [575 s]
+gen 2950 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2712/4096  [585 s]
+gen 3000 : meilleur 15 opérations (aptitude 15.24) ; valides dans la population : 2766/4096  [595 s]
+
+=== Programmes EXACTS (vérifiés sur les 2^32 entrées), du plus court au plus long ===
+  candidat 0 : 15 opérations (graine : 21), 10587 renvois vers le double
+  candidat 1 : 16 opérations (graine : 21), 10659 renvois vers le double
+  candidat 2 : 17 opérations (graine : 21), 10715 renvois vers le double
+  candidat 3 : 20 opérations (graine : 21), 22090 renvois vers le double
+  candidat 4 : 21 opérations (graine : 21), 10844 renvois vers le double
+Code écrit dans best_progs.cuh (5 candidats)  [595 s]
+
+== Chronométrage et re-vérification du code compilé
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+          ^
+
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                        ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                                             ^
+
+    float r9 = 0.f, r10 = 0.f, r11 = 0.f, r12 = 0.f, r13 = 0.f, r14 = 0.f, r15 = 0.f;
+                                                                           ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+          ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                                             ^
+
+    float r9 = 0.f, r10 = 0.f, r11 = 0.f, r12 = 0.f, r13 = 0.f, r14 = 0.f, r15 = 0.f;
+                                                                           ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+          ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                                             ^
+
+    float r9 = 0.f, r10 = 0.f, r11 = 0.f, r12 = 0.f, r13 = 0.f, r14 = 0.f, r15 = 0.f;
+                                                                ^
+
+    float r9 = 0.f, r10 = 0.f, r11 = 0.f, r12 = 0.f, r13 = 0.f, r14 = 0.f, r15 = 0.f;
+                                                                           ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+          ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                                             ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                                             ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                                             ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+          ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                        ^
+
+    float a6 = 0.f, a7 = 0.f, a8 = 0.f, a9 = 0.f, a10 = 0.f, a11 = 0.f;
+                                                             ^
+
+
+Temps relatifs à l'exp2f de CUDA (x1 = même vitesse) ; erreurs comptées contre la version exacte en double, sur la carte
+  exp2f de CUDA                        calcul pur x 1.00   16 appels/nombre x 1.00   (CUDA : faux sur 4,4 % des entrées)
+  graine (version de départ)              calcul pur x 5.67   16 appels/nombre x 3.03   erreurs sur 2^32 : 0
+  main : cœur à 15 opérations           calcul pur x 5.79   16 appels/nombre x 3.08   erreurs sur 2^32 : 0
+  main : toutes astuces connues            calcul pur x 5.71   16 appels/nombre x 3.07   erreurs sur 2^32 : 0
+  Koza : candidat 0 (le plus court)        calcul pur x 5.37   16 appels/nombre x 2.89   erreurs sur 2^32 : 0
+  Koza : candidat 1                        calcul pur x 5.46   16 appels/nombre x 2.95   erreurs sur 2^32 : 0
+  Koza : candidat 2                        calcul pur x 5.56   16 appels/nombre x 3.00   erreurs sur 2^32 : 0
+  Koza : candidat 3                        calcul pur x 5.87   16 appels/nombre x 3.17   erreurs sur 2^32 : 0
+
+CRITÈRE fixé d'avance : succès si un candidat Koza exact est au moins 10 % plus rapide que la meilleure version
+écrite à la main (cœur à 15 opérations). Bonus : x4,00 ou moins par rapport à CUDA.
+  meilleur Koza : 7.2 % plus rapide que la version main à 15 ; 5.9 % par rapport à « toutes astuces » ; x5.37 CUDA
+  VERDICT : NON ATTEINT
+FIN
