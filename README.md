@@ -85,6 +85,10 @@ koza/         programs found by the GPU genetic-programming search, timing, re-v
 SHA256SUMS    fingerprints of every file
 ```
 
+## See also
+
+[tt-erf-fp32](https://github.com/Maher75017/tt-erf-fp32): FP32 `erf` for the Tenstorrent SFPU (Blackhole, Wormhole), at most 1 ULP on every input, checked with the same exhaustive method on a bit-exact model of the hardware arithmetic. Proposed upstream in [tenstorrent/tt-metal#66809](https://github.com/tenstorrent/tt-metal/pull/66809).
+
 ## Note on the search engine
 
 The GPU genetic-programming engine (Koza-style, linear GP with exhaustive verification and counterexample feedback) is the author's private research tool and is not published here. The programs it found, their exhaustive re-verification and their timings are published.

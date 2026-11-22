@@ -1,7 +1,7 @@
 3c5e84ae9466e4cf5f4489db8dbb87ae2d9b19ec7d2125be8774e6fe6c60c7cd  ./.gitignore
 5cc81a0be7a9c5e3ff8b93f9b8924db9dc0b49e09431883ea47381a66a2e17a8  ./LICENSE
-8f748d06158b5c8ad6fc0bed6208842925dbb704ed1a6cd05a90744844d161cb  ./README.fr.md
-af9d8c3dbcf62558e091f5fc03b1ce90beaefcb67538ba6cdbefa48e7d132b85  ./README.md
+60a15a2d9966fa73477ebcb8cfd3056c8ea3b7f3f4c6ae01246d509d804ac9d0  ./README.fr.md
+8b22b5ffd2fa1cd6b2dfefcdb26c88e72f7f000f19aa78dd70b50bea94f7aa61  ./README.md
 43b03b382d915b4ab414872edbd97d4ce1c4208857ade2af1cfb0a595a1de337  ./cpu/bench/bench_homemade_expf.c
 6ca194ee3ff6ce5d23022fff221ccb7594b725549f961ef087f8d7b5320ad20c  ./cpu/bench/results_ryzen7800x3d_official.txt
 53c206f80c0c9c60f1990165baa9453d1c0c1e72dc9e8cb0f9564457b6b16fde  ./cpu/bench/run_officiel.sh
