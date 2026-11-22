@@ -36,6 +36,10 @@ Un banc de mesure maison sur une machine partagée annonçait d'abord 17 à 26 %
 
 Les commandes pour tout reproduire sont dans [README.md](README.md).
 
+## Voir aussi
+
+[tt-erf-fp32](https://github.com/Maher75017/tt-erf-fp32) : la fonction `erf` FP32 pour le SFPU de Tenstorrent (Blackhole, Wormhole), à 1 ULP au plus sur toutes les entrées, vérifiée avec la même méthode exhaustive sur un modèle bit à bit de l'arithmétique du matériel. Proposée à tt-metal dans [tenstorrent/tt-metal#66809](https://github.com/tenstorrent/tt-metal/pull/66809).
+
 ## À propos du moteur de recherche
 
 Le moteur de programmation génétique sur GPU (à la Koza : programmation génétique linéaire, vérification exhaustive, contre-exemples réinjectés) est l'outil de recherche privé de l'auteur ; il n'est pas publié ici. Les programmes qu'il a trouvés, leur re-vérification exhaustive et leurs chronométrages sont publiés.
