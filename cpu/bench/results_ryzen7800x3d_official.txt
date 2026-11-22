@@ -1,0 +1,46 @@
+CORE-MATH official perf.sh (CORE_MATH_PERF_MODE=rdtsc), old = CORE-MATH 3c3a4974 (2026-11-21), new = this repository.
+Run with cpu/bench/run_officiel.sh, pinned with taskset -c 2. Unit: TSC cycles per call (lower is faster).
+Model name:                              AMD Ryzen 7 7800X3D 8-Core Processor
+gcc exp2f essai1 old debit=9.219 latence=25.924
+gcc exp2f essai1 new debit=8.392 latence=25.921
+gcc exp2f essai2 old debit=9.212 latence=25.922
+gcc exp2f essai2 new debit=8.393 latence=25.923
+gcc exp2f essai3 old debit=9.221 latence=25.919
+gcc exp2f essai3 new debit=8.382 latence=25.920
+gcc expf essai1 old debit=9.228 latence=27.514
+gcc expf essai1 new debit=8.383 latence=27.532
+gcc expf essai2 old debit=9.226 latence=27.519
+gcc expf essai2 new debit=8.394 latence=27.511
+gcc expf essai3 old debit=9.227 latence=27.513
+gcc expf essai3 new debit=8.385 latence=27.518
+gcc exp10f essai1 old debit=9.269 latence=31.999
+gcc exp10f essai1 new debit=8.463 latence=31.985
+gcc exp10f essai2 old debit=9.263 latence=32.022
+gcc exp10f essai2 new debit=8.461 latence=32.003
+gcc exp10f essai3 old debit=9.269 latence=32.000
+gcc exp10f essai3 new debit=8.453 latence=31.976
+clang exp2f essai1 old debit=8.382 latence=25.844
+clang exp2f essai1 new debit=9.223 latence=25.841
+clang exp2f essai2 old debit=8.383 latence=25.843
+clang exp2f essai2 new debit=9.223 latence=25.841
+clang exp2f essai3 old debit=8.382 latence=25.843
+clang exp2f essai3 new debit=9.222 latence=25.845
+clang expf essai1 old debit=8.404 latence=27.512
+clang expf essai1 new debit=9.229 latence=27.515
+clang expf essai2 old debit=8.410 latence=27.511
+clang expf essai2 new debit=9.232 latence=27.511
+clang expf essai3 old debit=8.409 latence=27.508
+clang expf essai3 new debit=9.229 latence=27.510
+clang exp10f essai1 old debit=8.509 latence=32.010
+clang exp10f essai1 new debit=9.298 latence=31.995
+clang exp10f essai2 old debit=8.507 latence=32.007
+clang exp10f essai2 new debit=9.299 latence=31.989
+clang exp10f essai3 old debit=8.505 latence=32.013
+clang exp10f essai3 new debit=9.296 latence=31.995
+--- best of 3 (cycles per call; lower = faster) ---
+clang  exp10f  debit  8.505 ->  9.296 ( +9.3 %)   latence 32.007 -> 31.989 ( -0.1 %)
+clang  exp2f   debit  8.382 ->  9.222 (+10.0 %)   latence 25.843 -> 25.841 ( -0.0 %)
+clang  expf    debit  8.404 ->  9.229 ( +9.8 %)   latence 27.508 -> 27.510 ( +0.0 %)
+gcc    exp10f  debit  9.263 ->  8.453 ( -8.7 %)   latence 31.999 -> 31.976 ( -0.1 %)
+gcc    exp2f   debit  9.212 ->  8.382 ( -9.0 %)   latence 25.919 -> 25.920 ( +0.0 %)
+gcc    expf    debit  9.226 ->  8.383 ( -9.1 %)   latence 27.513 -> 27.511 ( -0.0 %)

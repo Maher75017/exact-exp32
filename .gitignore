@@ -1,0 +1,19 @@
+# build products and downloaded trees
+*.o
+*.so
+cpu/bench/core-math/
+cpu/bench/old/
+cpu/bench/new/
+cpu/bench/resultats.txt
+gpu/c1
+gpu/c2
+gpu/c3a
+gpu/resultats_*.txt
+koza/c3b
+koza/c3b_time
+koza/c3c
+koza/c3c_time
+koza/resultats_*.txt
+check
+hard
+verif_x
