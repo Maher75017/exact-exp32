@@ -17,12 +17,16 @@ L'`exp2f` de CUDA se trompe sur 189 192 458 entrées sur 4 294 967 296 (4,40 %),
 
 ## Ce qui existait déjà
 
-Ce dépôt est une reproduction indépendante, pas une première :
+La partie processeur est une reproduction indépendante, pas une première :
 
 - **Arm (optimized-routines)** publie des `expf`, `exp2f` et `exp10f` exacts construits avec la même recette, calculés en double.
 - **LLVM libc** contient un `expf` exact (arrondi au plus près) calculé en float et conçu pour les GPU. Leur `exp2f` en float n'est pas encore exact en novembre 2026 ; celui de `gpu/fexp2.h` l'est.
 - **Intel** (arXiv 2605.15547) obtient des `expf` exacts sur ses GPU, surtout en double ; le calcul en 32 bits y est un travail futur.
 - Le `log2f` de CORE-MATH est déjà sans test d'arrondi ; RLIBM produit des fonctions exactes par ajustement sous contraintes.
+- Un `expf` calculé uniquement en entiers, arrondi de façon statique, a été proposé pour LLVM libc en août 2026 (PR #209406) : une autre façon d'éviter le calcul en double, pour `expf` et non `exp2f`.
+- La recherche évolutive de code plus rapide existe déjà, par exemple GEVO (optimisation évolutive de noyaux GPU) et STOKE (super-optimisation stochastique de code en nombres flottants, à précision réglable). Aucun des deux n'exige que chaque candidat soit exact sur toutes les entrées.
+
+À notre connaissance (recherche faite en novembre 2026), `gpu/fexp2.h` est le premier `exp2f` correctement arrondi calculé uniquement en float pour CUDA, et `koza/` la première recherche génétique sur GPU où chaque candidat est vérifié sur les 2^32 entrées.
 
 L'apport du dépôt : les données (entrées difficiles, vérifications exhaustives, mesures officielles sur machine dédiée), un `exp2f` exact en float pour CUDA, et la recherche génétique sur GPU. Elle a trouvé une étape compensée en 3 opérations : `sh = fma(th, ph, th); d = sh - th; err ≈ fma(th, ph, -d)`.
 

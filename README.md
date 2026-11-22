@@ -15,7 +15,7 @@ Author: Maher El Hmissi, November 2026. Français : [README.fr.md](README.fr.md)
 
 CUDA's own `exp2f` returns a wrong result for 189,192,458 of the 4,294,967,296 inputs (4.40 %), with errors up to 2 ulp.
 
-## Prior art: this is an independent reproduction, not a first
+## Prior art: the CPU part is an independent reproduction, not a first
 
 A search done after the work found that:
 
@@ -23,6 +23,10 @@ A search done after the work found that:
 - **LLVM libc** contains a float-only `expf` correctly rounded in round-to-nearest and designed for GPUs (`float_eval_cr_rn`). As of November 2026 its float `exp2f` is not correctly rounded; the one in `gpu/fexp2.h` is.
 - **Intel** (arXiv 2605.15547, 2026) reports correctly rounded `expf` on its GPUs, computed mainly in double precision, and names 32-bit internal computation as future work.
 - CORE-MATH's `log2f` is already free of a rounding test; RLIBM generates correctly rounded functions by constrained polynomial fitting.
+- An integer-only, statically rounded `expf` was proposed for LLVM libc in August 2026 (PR #209406): another way to avoid double precision, for `expf` rather than `exp2f`.
+- Evolutionary search for faster code already exists, for example GEVO (evolutionary optimization of GPU kernels) and STOKE (stochastic superoptimization of floating-point code with tunable precision). Neither requires every candidate to be exact on all inputs.
+
+To our knowledge (search done in November 2026), `gpu/fexp2.h` is the first correctly rounded float-only `exp2f` for CUDA, and `koza/` the first GPU genetic-programming search in which every candidate is verified on all 2^32 inputs.
 
 What this repository adds: the data (hard-case lists, exhaustive checks, official benchmarks on a dedicated machine), a float-only correctly rounded `exp2f` for CUDA, and the GPU genetic-programming search, including a 3-operation compensated step it found: `sh = fma(th, ph, th); d = sh - th; err ≈ fma(th, ph, -d)`.
 
