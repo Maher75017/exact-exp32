@@ -1,0 +1,20 @@
+{
+  "title": "exact-exp32: correctly rounded single-precision exponentials, float-only exp2f on GPU, and a GPU genetic-programming search",
+  "upload_type": "software",
+  "description": "Correctly rounded exp2f, expf, exp10f and logf without a rounding test on the CPU, a float-only correctly rounded exp2f on an NVIDIA GPU (RTX 5090), and a Koza-style genetic-programming search on the GPU for faster exact code. Every candidate is checked on all 2^32 inputs.",
+  "creators": [
+    {
+      "name": "El Hmissi, Maher"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "correctly rounded",
+    "elementary functions",
+    "exhaustive testing",
+    "floating point",
+    "CUDA",
+    "genetic programming"
+  ],
+  "version": "1.0.0"
+}
