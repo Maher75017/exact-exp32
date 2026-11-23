@@ -1,5 +1,7 @@
 # exact-exp32
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24485607.svg)](https://doi.org/10.5281/zenodo.24485607)
+
 Correctly rounded single-precision exponentials (`exp2f`, `expf`, `exp10f`) without a rounding test on the CPU, a float-only correctly rounded `exp2f` on an NVIDIA GPU, and a genetic-programming (Koza-style) search for faster exact code, every candidate checked on all 2^32 inputs.
 
 Author: Maher El Hmissi, November 2026. Français : [README.fr.md](README.fr.md).
