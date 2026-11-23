@@ -43,3 +43,7 @@ Les commandes pour tout reproduire sont dans [README.md](README.md).
 ## À propos du moteur de recherche
 
 Le moteur de programmation génétique sur GPU (à la Koza : programmation génétique linéaire, vérification exhaustive, contre-exemples réinjectés) est l'outil de recherche privé de l'auteur ; il n'est pas publié ici. Les programmes qu'il a trouvés, leur re-vérification exhaustive et leurs chronométrages sont publiés.
+
+## Licence
+
+MIT (voir `LICENSE`). Les fichiers issus du projet CORE-MATH (par exemple `cpu/*.c`, les copies de référence `cm_*_ref.c` et `gpu/exp2f_orig.c`) conservent leur mention MIT d'origine et le copyright (c) 2022-2023 Alexei Sibidanov.
