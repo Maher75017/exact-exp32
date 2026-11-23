@@ -19,7 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Files derived from the CORE-MATH project (cpu/*.c and the cm_*_ref.c /
-exp2f_orig.c reference copies) keep their original MIT notice and copyright
-(c) 2022-2023 Alexei Sibidanov, in addition to the line above.

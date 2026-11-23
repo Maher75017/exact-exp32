@@ -95,4 +95,4 @@ The GPU genetic-programming engine (Koza-style, linear GP with exhaustive verifi
 
 ## License
 
-MIT (see `LICENSE`). Files derived from CORE-MATH keep their original MIT notice.
+MIT (see `LICENSE`). Files derived from the CORE-MATH project (for example `cpu/*.c`, the `cm_*_ref.c` reference copies and `gpu/exp2f_orig.c`) keep their original MIT notice and copyright (c) 2022-2023 Alexei Sibidanov.
