@@ -1,6 +1,6 @@
 # exact-exp32 (en français)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24485607.svg)](https://doi.org/10.5281/zenodo.24485607)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24485607-blue.svg)](https://doi.org/10.5281/zenodo.24485607)
 
 Exponentielles en simple précision exactes (`exp2f`, `expf`, `exp10f`) sans test d'arrondi sur processeur, un `exp2f` exact calculé uniquement en float sur carte graphique NVIDIA, et une recherche par programmation génétique (à la Koza) de code exact plus rapide. Chaque candidat est vérifié sur les 2^32 entrées.
 
